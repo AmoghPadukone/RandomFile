@@ -116,7 +116,13 @@ const PostOpened = ({ postData, onLikeToggle }) => {
       )}
       <Divider className="my-[10px]" />
 
-      <PostComments comments={comments} />
+      {comments.length === 0 ? (
+        <div className="text-center text-gray-500">
+          Start commenting already :P
+        </div>
+      ) : (
+        <PostComments comments={comments} />
+      )}
     </div>
   );
 };

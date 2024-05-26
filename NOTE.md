@@ -23,6 +23,10 @@ Premji Assignment, Socials is a fully responsive social platform designed for ea
 - **Navigation Bar**:
   - Dismissible notifications dropdown.
   - Profile dropdown.
+- **Messaging**:
+  - Fully functional messaging system with timestamps and message previews.
+  - Responsive design with a distinct layout for mobile devices.
+  - Design inspired by Instagram's mobile web app.
 
 ## Tech Stack
 
@@ -100,16 +104,14 @@ Follow these steps to run the project locally:
    cd premji-assignment
    ```
 
-2. **Install dependencies:**:
+2. **Install dependencies:**
 
    ```sh
    npm install
-
    ```
 
-3. **Start the development server:**:
+3. **Start the development server:**
 
    ```sh
    npm run dev
-
    ```
