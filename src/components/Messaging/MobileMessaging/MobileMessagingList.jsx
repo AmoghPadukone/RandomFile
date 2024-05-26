@@ -158,15 +158,21 @@ const MobileMessageList = () => {
       {filteredProfiles.length === 0 ? (
         <div className="text-center opacity-50">{`User not found :(`}</div>
       ) : (
-        filteredProfiles.map((profile) => (
-          <div key={profile.id} className="mb-4">
-            <IndividualMessageBox
-              id={profile.id}
-              name={profile.name}
-              onOpenChat={() => openChat(profile.id)}
-            />
-          </div>
-        ))
+        filteredProfiles.map((profile) => {
+          const lastMessage =
+            profile.chatHistory[profile.chatHistory.length - 1];
+          return (
+            <div key={profile.id} className="mb-4">
+              <IndividualMessageBox
+                id={profile.id}
+                name={profile.name}
+                onOpenChat={() => openChat(profile.id)}
+                lastMessageSender={lastMessage.sender}
+                lastMessageContent={lastMessage.message}
+              />
+            </div>
+          );
+        })
       )}
     </div>
   );
